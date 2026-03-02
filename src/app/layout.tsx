@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Downtime Detector",
-  description: "Track and explore famous service outages and incidents across major tech platforms",
+  title: "HN Outage Tracker",
+  description:
+    "Track and explore famous service outages and incidents sourced from Hacker News discussions across major tech platforms",
+  openGraph: {
+    title: "HN Outage Tracker",
+    description:
+      "Track and explore famous service outages and incidents sourced from Hacker News discussions across major tech platforms",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

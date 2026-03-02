@@ -18,3 +18,31 @@ confidence: direct
 - Page displays the heading "Downtime Detector"
 - Page displays a subheading or description mentioning "outages" or "incidents"
 - No console errors appear
+
+## Playbook
+
+```json
+[
+  {
+    "type": "navigate",
+    "url": "/",
+    "description": "Navigate to the homepage"
+  },
+  {
+    "type": "wait",
+    "selector": "role=heading[name='Downtime Detector']",
+    "description": "Wait for the page to fully load by waiting for main heading"
+  },
+  {
+    "type": "assert",
+    "selector": "role=heading[name='Downtime Detector']",
+    "description": "Verify page displays the heading 'Downtime Detector'"
+  },
+  {
+    "type": "assert",
+    "selector": "#main-description",
+    "value": "outages",
+    "description": "Verify page displays description mentioning 'outages'"
+  }
+]
+```
